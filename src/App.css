@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: -moz-linear-gradient(left, rgba(110,154,196,1) 0%, rgba(0,58,120,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(110,154,196,1)), color-stop(100%, rgba(0,58,120,1)));
+  background: -webkit-linear-gradient(left, rgba(110,154,196,1) 0%, rgba(0,58,120,1) 100%);
+  background: -o-linear-gradient(left, rgba(110,154,196,1) 0%, rgba(0,58,120,1) 100%);
+  background: -ms-linear-gradient(left, rgba(110,154,196,1) 0%, rgba(0,58,120,1) 100%);
+  background: linear-gradient(to right, rgba(110,154,196,1) 0%, rgba(0,58,120,1) 100%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
+  padding: 15px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.main {
+  outline: none;
+  border-radius: 8px 8px 8px 8px;
+  background: #2a6bb1;
+  box-shadow: 0 2px 80px -20px rgba(0, 0, 0, .5);
+  width: 80%;
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.info {
+  border-radius: 8px 0px 0px 8px;
+  outline: none;
+  min-height: 55vh;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTGxvDog3rTwX7QcMCrBc6I2VQgP7veFGGzDA&usqp=CAU") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #000;
+}
+
+.form {
+  min-height: 55vh;
+  padding: 70px 0;
+}
+
+.form-row,
+.form-group,
+.form-control {
+  margin-bottom: 0!important;
+}
+
+p, .text {
+  color: #fff;
+  margin-bottom: 0!important;
+  padding: 0;
+  line-height: 2;
+}
+
+@media (max-width: 767px) {
+  .main {
+    width: 100%;
+  }  
+
+  .info {
+    border-radius: 8px 8px 0px 0px;
+  }  
+
+  .form {
+    min-height: initial;
   }
 }
